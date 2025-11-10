@@ -258,6 +258,7 @@
 					if (!response.ok) {
 						throw new Error(`Failed to load ${name} wordlist`);
 					}
+					// Ensure UTF-8 encoding for emoji and rune wordlists
 					return response.text();
 				})
 				.then(text => {
